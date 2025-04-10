@@ -33,11 +33,11 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/recortado_filtrado_0.js"></script>
+        <script src="data/pxdptodatosok_0.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-28.102549039919236,-63.54913555166089],[-23.402077506579158,-54.36991284032697]]);
+        }).fitBounds([[-28.939907598327014,-64.3750363134354],[-23.411576666308857,-53.57914477638107]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -75,40 +75,43 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_recortado_filtrado_0(feature, layer) {
+        function pop_pxdptodatosok_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td class="visible-with-data" id="gid" colspan="2"><strong>gid</strong><br />' + (feature.properties['gid'] !== null ? autolinker.link(String(feature.properties['gid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['link'] !== null ? autolinker.link(String(feature.properties['link']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fna'] !== null ? autolinker.link(String(feature.properties['fna']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['codpcia'] !== null ? autolinker.link(String(feature.properties['codpcia']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['gna'] !== null ? autolinker.link(String(feature.properties['gna']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['departamen'] !== null ? autolinker.link(String(feature.properties['departamen']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['nam'] !== null ? autolinker.link(String(feature.properties['nam']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['provincia'] !== null ? autolinker.link(String(feature.properties['provincia']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['in1'] !== null ? autolinker.link(String(feature.properties['in1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['mujeres'] !== null ? autolinker.link(String(feature.properties['mujeres']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fdc'] !== null ? autolinker.link(String(feature.properties['fdc']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['varones'] !== null ? autolinker.link(String(feature.properties['varones']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['sag'] !== null ? autolinker.link(String(feature.properties['sag']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['personas'] !== null ? autolinker.link(String(feature.properties['personas']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Infff_fid'] !== null ? autolinker.link(String(feature.properties['Infff_fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['hogares'] !== null ? autolinker.link(String(feature.properties['hogares']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Infff_Ciudad'] !== null ? autolinker.link(String(feature.properties['Infff_Ciudad']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['viv_part'] !== null ? autolinker.link(String(feature.properties['viv_part']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Infff_Tasa'] !== null ? autolinker.link(String(feature.properties['Infff_Tasa']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['viv_part_h'] !== null ? autolinker.link(String(feature.properties['viv_part_h']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Infff_Tasanueva" colspan="2"><strong>Infff_Tasanueva</strong><br />' + (feature.properties['Infff_Tasanueva'] !== null ? autolinker.link(String(feature.properties['Infff_Tasanueva']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Maternidad joven Chaco — Hoja1_Departamento'] !== null ? autolinker.link(String(feature.properties['Maternidad joven Chaco — Hoja1_Departamento']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] !== null ? autolinker.link(String(feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -118,10 +121,10 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_recortado_filtrado_0_0(feature) {
-            if (feature.properties['Infff_Tasanueva'] >= 0.210000 && feature.properties['Infff_Tasanueva'] <= 0.363000 ) {
+        function style_pxdptodatosok_0_0(feature) {
+            if (feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] >= 21.670000 && feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] <= 35.698000 ) {
                 return {
-                pane: 'pane_recortado_filtrado_0',
+                pane: 'pane_pxdptodatosok_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -130,13 +133,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(232,255,255,1.0)',
+                fillColor: 'rgba(252,191,193,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Infff_Tasanueva'] >= 0.363000 && feature.properties['Infff_Tasanueva'] <= 0.471000 ) {
+            if (feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] >= 35.698000 && feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] <= 49.396000 ) {
                 return {
-                pane: 'pane_recortado_filtrado_0',
+                pane: 'pane_pxdptodatosok_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -145,13 +148,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(191,204,255,1.0)',
+                fillColor: 'rgba(249,134,171,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Infff_Tasanueva'] >= 0.471000 && feature.properties['Infff_Tasanueva'] <= 0.626000 ) {
+            if (feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] >= 49.396000 && feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] <= 58.432000 ) {
                 return {
-                pane: 'pane_recortado_filtrado_0',
+                pane: 'pane_pxdptodatosok_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -160,13 +163,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(149,153,255,1.0)',
+                fillColor: 'rgba(227,73,152,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Infff_Tasanueva'] >= 0.626000 && feature.properties['Infff_Tasanueva'] <= 0.680000 ) {
+            if (feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] >= 58.432000 && feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] <= 64.618000 ) {
                 return {
-                pane: 'pane_recortado_filtrado_0',
+                pane: 'pane_pxdptodatosok_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -175,13 +178,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(108,102,255,1.0)',
+                fillColor: 'rgba(182,22,134,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Infff_Tasanueva'] >= 0.680000 && feature.properties['Infff_Tasanueva'] <= 0.740000 ) {
+            if (feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] >= 64.618000 && feature.properties['Maternidad joven Chaco — Hoja1_Cantidad de hijos/as nacidos vivos el último año por cada 1.000 mujeres de 15 a 19 años'] <= 78.580000 ) {
                 return {
-                pane: 'pane_recortado_filtrado_0',
+                pane: 'pane_pxdptodatosok_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -190,40 +193,25 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(67,51,255,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['Infff_Tasanueva'] >= 0.740000 && feature.properties['Infff_Tasanueva'] <= 0.830000 ) {
-                return {
-                pane: 'pane_recortado_filtrado_0',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(25,0,255,1.0)',
+                fillColor: 'rgba(122,1,119,1.0)',
                 interactive: true,
             }
             }
         }
-        map.createPane('pane_recortado_filtrado_0');
-        map.getPane('pane_recortado_filtrado_0').style.zIndex = 400;
-        map.getPane('pane_recortado_filtrado_0').style['mix-blend-mode'] = 'normal';
-        var layer_recortado_filtrado_0 = new L.geoJson(json_recortado_filtrado_0, {
+        map.createPane('pane_pxdptodatosok_0');
+        map.getPane('pane_pxdptodatosok_0').style.zIndex = 400;
+        map.getPane('pane_pxdptodatosok_0').style['mix-blend-mode'] = 'normal';
+        var layer_pxdptodatosok_0 = new L.geoJson(json_pxdptodatosok_0, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_recortado_filtrado_0',
-            layerName: 'layer_recortado_filtrado_0',
-            pane: 'pane_recortado_filtrado_0',
-            onEachFeature: pop_recortado_filtrado_0,
-            style: style_recortado_filtrado_0_0,
+            dataVar: 'json_pxdptodatosok_0',
+            layerName: 'layer_pxdptodatosok_0',
+            pane: 'pane_pxdptodatosok_0',
+            onEachFeature: pop_pxdptodatosok_0,
+            style: style_pxdptodatosok_0_0,
         });
-        bounds_group.addLayer(layer_recortado_filtrado_0);
-        map.addLayer(layer_recortado_filtrado_0);
+        bounds_group.addLayer(layer_pxdptodatosok_0);
+        map.addLayer(layer_pxdptodatosok_0);
         setBounds();
         </script>
     </body>
